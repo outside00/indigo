@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 26px;
+    color: rgb(26, 64, 235);
+}
+
+h2 {
+    font-size: 22px;
+    color: rgb(26, 64, 235);
+}
+
+h3 {
+    font-size: 18px;
+    color: rgb(26, 64, 235);
+}
+
+h4 {
+    font-size: 16px;
+    color: #787878;
+}
+
+p {
+    font-size: 16px;
+}
+
+header,
+nav,
+article,
+aside,
+section,
+footer {
+    display: block;
+}

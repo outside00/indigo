@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+@keyframes span-first {
+    from { 
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+}
+.container {
+    width: 100%; /* 모바일,태블릿크기 */
+    max-width: 1024px; /* pc 크기 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* ======== header ======== */
+header {
+    position: relative;
+    width: 100%;   
+    height: 50px;
+}
+
+.logo-brand {
+    margin-top: 15px;
+    margin-left: 20px;
+    /* border: 1px solid #000; */
+}
+
+.gnb-border-menu {
+    position: absolute;
+    right: 20px;
+    top: 4px;
+    /* border: 1px solid #000; */
+}
+
+.border-btn {
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+}
+
+.border-btn > span { /* 보더만들때 span을 display:block으로줘야함 */
+    display: block;
+    width: 30px;
+    height: 4px;
+    cursor: pointer;
+    background-color: rgb(26, 64, 235);
+}
+
+.border-btn > span:first-child {
+    animation-name: span-first;
+    animation-duration: 0.3s;
+}
+.border-btn > span:nth-child(2) {
+    margin-top: 5px;
+}
+
+.border-btn > span:last-child {
+    margin-top: 5px;
+}
+
+/* gnb */
+.gnb {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    /* display: none; */
+    flex-direction: column;
+    z-index: 1;
+}
+
+.gnb > li {
+    width: 100%;
+    padding: 10px 0 10px 54px;
+    border-bottom: 1px solid rgb(3, 2, 104);
+    background-color: rgb(26, 64, 235);
+}
+
+.gnb > li:last-child {
+    border-bottom: none;
+}
+
+.gnb > li > a {
+    color: #fff;
+}
+
+/* ==================== main ======================  */
+/* article */
+article > h2 {
+    font-size: 0;
+}
+
+.slide-img {
+    height: 220px;
+}
+
+.slide-img > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* section */
+section {
+    margin-bottom: 50px;
+}
+
+main > section:last-child {
+    margin-bottom: 20px;
+}
+
+section > h2 {
+    font-size: 0;
+}
+
+/* text-box */
+.text-box {
+    width: 97%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.text-box > h2{
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.text-box > p{
+    font-size: 12px;
+}
+
+/* flex-pro */
+.flex-pro {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.flex-pro .pro-img {
+    display: inline-block;
+    width: 20%;
+    margin-bottom: 30px;
+}
+
+.pro-img > img {
+    width: 100%;
+}
+
+.flex-pro h3 {
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.flex-pro p {
+    font-size: 10px;
+}
+
+.HOME {
+    margin-bottom: 80px;
+}
+
+.WEARE {
+    margin-bottom: 80px;
+}
+
+.WORK {
+    margin-bottom: 80px;
+}
+
+.BLOG {
+    margin-bottom: 80px;
+}
+
+/* work-img */
+
+.work {
+    width: 100%;
+    text-align: center;
+}
+
+.work h2 {
+    font-size: 35px;
+    margin-bottom: 80px;
+}
+
+/* flex-img */
+.flex-img {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-img > .sports {
+    border: 1px solid #000;
+}
+
+.flex-img > .sports > a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-img > .sports > a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.2s;
+    background-color: rgb(26, 64, 235);
+}
+
+.flex-img > .sports > a:hover::before {
+    opacity: 0.5;
+}
+
+.img-title {
+    position: absolute;
+    top: 0;
+    left: 23;
+    z-index: 20;
+    opacity: 0;
+    transition: all 0.3s;
+    text-align: left;
+    padding: 20px;
+    color: #fff;
+}
+
+.sports > a:hover .img-title {
+    /* transform: translateY(20px); */
+    opacity: 1;
+}
+
+.flex-img > .sports > a > img {
+    display: block;
+    width: 100%;
+}
+
+.border > p {
+    width: 20px;
+    height: 3px;
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: rgb(26, 64, 235);
+}
+/* BLOG-text */
+.flex-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flex-text > h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.BLOG-text { 
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border: 1px solid #000;
+}
+
+.BLOG-text img { 
+    width: 100%;
+}
+
+.BLOG-text h4 {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.BLOG-text p {
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: left; 
+}
+
+/* address-info */
+label {
+    display: none;
+}
+
+.flex-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flex-info h2 {
+    font-size: 35px;
+}
+
+.address-info > input,
+.address-info textarea
+ {
+    width: 90%;
+    padding-bottom: 15px;
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.address-info > input::placeholder,
+.address-info textarea::placeholder {
+    color: rgb(26, 64, 235);
+}
+
+
+.submit {
+    width: 95%;
+    margin-top: 30px;
+    text-align: right;
+}
+
+.submit > input {
+    padding: 10px;
+    color: #fff;
+    background-color: rgb(26, 64, 235);    
+}
+
+/* footger */
+footer > h3 {
+    text-align: center;
+}
+
+footer > h3 > a {
+    color: rgb(26, 64, 235);
+}
+
+/* ====================  테블릿 ======================== */

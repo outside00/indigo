@@ -10,18 +10,27 @@
 </head>
 <body>
     <header>
+        <div class="logo-brand">
+        <a href="#"><h1>INDIGO</h1></a>
+        </div>
+
+        <div class="gnb-border-menu">
+            <button type="menu" class="border-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
         <nav>
-            <div class="flex-box">
-                <h1><a href="#">INDIGO</a></h1>
-                <ul class="gnb">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">WE ARE</a></li>
-                    <li><a href="#">WORK</a></li>
-                    <li><a href="#">BLOC</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                </ul> <!-- gnb -->
-            </div> <!-- flex-box -->
-        </nav>
+            <ul class="gnb">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">WE ARE</a></li>
+                <li><a href="#">WORK</a></li>
+                <li><a href="#">BLOC</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul> <!-- gnb -->
+        </nav> <!-- gnb-menu -->
     </header>
 
     <main>
@@ -35,10 +44,10 @@
         <section>
             <h2>content</h2>
             <div class="container"> <!-- 그리드 -->
-                <h2>WE ARE</h2>
                 <div class="text-box">
+                    <h2>WE ARE</h2>
                     <p>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br>
                         piece of classical Latin literature from 45 BC, making it over 2000 years old.
                     </p>
                 </div>
@@ -46,10 +55,12 @@
         </section>
 
         <section>
-            <div class="continer"> <!-- 그리드 -->
+            <div class="container"> <!-- 그리드 -->
                 <div class="flex-pro"> <!-- 플렉스박스 -->
-                    <div class="promotion">
+                    <div class="HOME">
+                        <div class="pro-img">
                         <img src="./images/promo01.png" alt="HOME">
+                        </div> <!-- pro-img -->
                         <h3>HOME</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of
@@ -57,8 +68,10 @@
                         </p>
                     </div>
     
-                    <div class="promotion">
+                    <div class="WEARE">
+                        <div class="pro-img">
                         <img src="./images/promo02.png" alt="WE ARE">
+                        </div>
                         <h3>WE ARE</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of
@@ -66,8 +79,10 @@
                         </p>
                     </div>
     
-                    <div class="promotion">
-                        <img src="./images/promo03.png" alt="WORK">
+                    <div class="WORK">
+                        <div class="pro-img">
+                            <img src="./images/promo03.png" alt="WORK">
+                        </div>
                         <h3>WORK</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of
@@ -75,64 +90,150 @@
                         </p>
                     </div>
     
-                    <div class="promotion">
-                        <img src="./images/promo04.png" alt="BLOC">
+                    <div class="BLOG">
+                        <div class="pro-img">
+                            <img src="./images/promo04.png" alt="BLOC">
+                        </div>
                         <h3>BLOG</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of
                             the printing and typesetting industry.
                         </p>
-                    </div>
+                    </div> <!-- BLOG -->
                 </div> <!-- flex-pro -->
             </div> <!-- continer -->
         </section>
 
         <section>
             <h2>WORK</h2>
-            <div class="container">
-                <a href="#"><img src="./images/work01.jpg" alt="work01"></a>
-                <a href="#"><img src="./images/work02.jpg" alt="work02"></a>
-                <a href="#"><img src="./images/work03.jpg" alt="work03"></a>
-                <a href="#"><img src="./images/work04.jpg" alt="work04"></a>
-                <a href="#"><img src="./images/work05.jpg" alt="work05"></a>
-                <a href="#"><img src="./images/work06.jpg" alt="work06"></a>
-                <a href="#"><img src="./images/work07.jpg" alt="work07"></a>
-                <a href="#"><img src="./images/work08.jpg" alt="work08"></a>
-            </div>
+            <div class="work">
+                <div class="container"><!-- 그리드 -->
+                    <h2>WORK</h2>
+                </div>
 
-            <div class="border"></div>
+                <div class="flex-img">
+                    <div class="sports">
+                        <a href="#"> <!-- a태그에는 블록요소 전체다가능 -->
+                            <img src="./images/work01.jpg" alt="work01">
+                            <div class="img-title">
+                                <strong>Running</strong><br>
+                                <span>WEB/PRINT</span>     
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sports">
+                        <a href="#">
+                            <img src="./images/work02.jpg" alt="work02">
+                            <div class="img-title">
+                                <strong>Rugby</strong><br>
+                                <span>WEB/PRINT</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sports">
+                        <a href="#">
+                            <img src="./images/work03.jpg" alt="work03">
+                            <div class="img-title">
+                                <strong>Ironman's game</strong><br>
+                                <span>WEB/PRINT</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sports">
+                        <a href="#">
+                            <img src="./images/work04.jpg" alt="work04">
+                            <div class="img-title">
+                                <strong>Running race</strong><br>
+                                <span>WEB/PRINT</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sports">
+                        <a href="#">
+                            <img src="./images/work05.jpg" alt="work05">
+                            <div class="img-title">
+                                <strong>Boxing</strong><br>
+                                <span>WEB/PRINT</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sports">
+                        <a href="#">
+                            <img src="./images/work06.jpg" alt="work06">
+                            <div class="img-title">
+                                <strong>Hockey</strong><br>
+                                <span>WEB/PRINT</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sports">
+                        <a href="#">
+                            <img src="./images/work07.jpg" alt="work07">
+                            <div class="img-title">
+                                <strong>Snowboard</strong><br>
+                                <span>WEB/PRINT</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="sports">
+                        <a href="#">
+                            <img src="./images/work08.jpg" alt="work08">
+                            <div class="img-title">
+                                <strong>Basketball</strong><br>
+                                <span>WEB/PRINT</span>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- flex-img -->
+
+                <div class="border">
+                    <p>
+                        <span></span>
+                    </p>
+                </div>
+            </div> <!-- work -->
         </section>
 
         <section>
             <h2>BLOC</h2>
             <div class="container">
-                <div class="BLOG-text">
-                    <img src="./images/blog01.jpg" alt="blog01">
-                    <h4>OCT 30, 2016</h4>
-                    <p>
-                        There are many variations of
-                        passages of Lorem Ipsum
-                    </p>
-                </div>
-
-                <div class="BLOG-text">
-                    <img src="./images/blog02.jpg" alt="blog02">
-                    <h4>OCT 30, 2016</h4>
-                    <p>
-                        There are many variations of
-                        passages of Lorem Ipsum
-                    </p>
-                </div>
-
-                <div class="BLOG-text">
-                    <img src="./images/blog03.jpg" alt="blog03">
-                    <h4>OCT 30, 2016</h4>
-                    <p>
-                        There are many variations of
-                        passages of Lorem Ipsum
-                    </p>
-                </div>
-            </div>
+                <div class="flex-text">
+                    <h2>BLOC</h2>
+                    <div class="BLOG-text">
+                        <img src="./images/blog01.jpg" alt="blog01">
+                        <h4>OCT 30, 2016</h4>
+                        <p>
+                            There are many variations of
+                            passages of Lorem Ipsum
+                        </p>
+                    </div>
+        
+                    <div class="BLOG-text">
+                        <img src="./images/blog02.jpg" alt="blog02">
+                        <h4>OCT 30, 2016</h4>
+                        <p>
+                            There are many variations of
+                            passages of Lorem Ipsum
+                        </p>
+                    </div>
+        
+                    <div class="BLOG-text">
+                        <img src="./images/blog03.jpg" alt="blog03">
+                        <h4>OCT 30, 2016</h4>
+                        <p>
+                            There are many variations of
+                            passages of Lorem Ipsum
+                        </p>
+                    </div>
+                </div> <!-- flex-text -->
+            </div> <!-- container -->
         </section>
 
         <section>
@@ -140,29 +241,33 @@
             <address>
                 <form>
                     <div class="container"> <!-- 그리드 -->
-                        <div class="address-info">
-                            <label for="user-name">Name</label>
-                            <input type="text" name="user-name" id="user-name" placeholder="Name">
-                        </div>                  
+                        <div class="flex-info">
+                            <h2>CONTACT</h2>
+                            <div class="address-info">
+                                <label for="user-name">Name</label>
+                                <input type="text" name="user-name" id="user-name" placeholder="Name">
+                            </div>                  
+    
+                            <div class="address-info">
+                                <label for="user-Phone">Phone</label>
+                                <input type="tel" name="user-Phone" id="user-Phone" placeholder="Phone">
+                            </div>
+    
+                            <div class="address-info">
+                                <label for="user-Email">Email Address</label>
+                                <input type="email" name="user-Email" id="user-Email" placeholder="Email Address">
+                            </div>
+    
+                            <div class="address-info">
+                                <label for="user-Message">Message</label>
+                                <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message"></textarea>
+                            </div>
 
-                        <div class="address-info">
-                            <label for="user-Phone">Phone</label>
-                            <input type="tel" name="user-Phone" id="user-Phone" placeholder="Phone">
+                            <div class="submit">
+                                <input type="submit" value="SEND MASSAGE">
+                            </div>
                         </div>
-
-                        <div class="address-info">
-                            <label for="user-Email">Email Address</label>
-                            <input type="email" name="user-Email" id="user-Email" placeholder="Email Address">
-                        </div>
-
-                        <div class="address-info">
-                            <label for="user-Message">Message</label>
-                            <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Message"></textarea>
-                        </div>
-
-                        <input type="submit" value="SEND MASSAGE">
-                        
-                    </div>
+                    </div> <!--container -->
                 </form>
             </address>
         </section>
