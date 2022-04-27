@@ -1,20 +1,9 @@
 @charset "utf-8";
 
-@keyframes span-first {
-    from { 
-        -ms-transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-}
 .container {
     width: 100%; /* 모바일,태블릿크기 */
-    max-width: 1024px; /* pc 크기 */
+    max-width: 1200px; /* pc 크기 */
+    padding: 0 10px;
     margin: 0 auto; /* 가운데 정렬 */
 }
 
@@ -52,10 +41,6 @@ header {
     background-color: rgb(26, 64, 235);
 }
 
-.border-btn > span:first-child {
-    animation-name: span-first;
-    animation-duration: 0.3s;
-}
 .border-btn > span:nth-child(2) {
     margin-top: 5px;
 }
@@ -65,11 +50,16 @@ header {
 }
 
 /* gnb */
+nav {
+    width: 100%;
+    display: none;
+}
+
 .gnb {
     position: absolute;
     top: 100%;
     width: 100%;
-    /* display: none; */
+    display: flex;
     flex-direction: column;
     z-index: 1;
 }
@@ -113,6 +103,10 @@ main > section:last-child {
     margin-bottom: 20px;
 }
 
+main > section:last-child > h2 {
+    font-size: 0;
+}
+
 section > h2 {
     font-size: 0;
 }
@@ -131,7 +125,7 @@ section > h2 {
 }
 
 .text-box > p{
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* flex-pro */
@@ -161,7 +155,7 @@ section > h2 {
 }
 
 .flex-pro p {
-    font-size: 10px;
+    font-size: 16px;
 }
 
 .HOME {
@@ -199,14 +193,13 @@ section > h2 {
 }
 
 .flex-img > .sports {
-    border: 1px solid #000;
+    width: 100%;
 }
 
 .flex-img > .sports > a {
     position: relative;
     display: block;
     width: 100%;
-    height: 100%;
 }
 
 .flex-img > .sports > a::before {
@@ -227,6 +220,10 @@ section > h2 {
     opacity: 0.5;
 }
 
+.flex-img > .sports > a > img {
+    width: 0;
+}
+
 .img-title {
     position: absolute;
     top: 0;
@@ -239,8 +236,8 @@ section > h2 {
     color: #fff;
 }
 
+
 .sports > a:hover .img-title {
-    /* transform: translateY(20px); */
     opacity: 1;
 }
 
@@ -272,7 +269,6 @@ section > h2 {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 40px;
-    border: 1px solid #000;
 }
 
 .BLOG-text img { 
@@ -292,6 +288,7 @@ section > h2 {
 }
 
 /* address-info */
+
 label {
     display: none;
 }
@@ -302,7 +299,7 @@ label {
     text-align: center;
 }
 
-.flex-info h2 {
+.flex-info > h2 {
     font-size: 35px;
 }
 
@@ -317,7 +314,7 @@ label {
 }
 
 .address-info > input::placeholder,
-.address-info textarea::placeholder {
+.address-info > textarea::placeholder {
     color: rgb(26, 64, 235);
 }
 
@@ -344,3 +341,128 @@ footer > h3 > a {
 }
 
 /* ====================  테블릿 ======================== */
+
+@media screen and (min-width:768px) {
+    .logo-brand h1 {
+        font-size: 25px;
+        font-weight: lighter;
+    }
+
+    .gnb-border-menu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+    
+    .gnb {
+        position: absolute;
+        top: 10%;
+        right: 0;
+        width: 60%;
+        margin-right: 2.5%;
+        flex-direction: row;
+    }
+    
+    .gnb > li {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        border-bottom: 0px;
+        background-color: #fff;
+    }
+        
+    .gnb > li > a {
+        width: 100%;
+        font-size: 15px;
+        margin: 0 30px 0 0;
+        color: rgb(26, 64, 235);
+    }
+
+    /* text-box */
+    .text-box {
+        margin-bottom: 10%;
+    }
+
+    .text-box > h2{
+        font-weight: lighter;
+    }
+
+    /* flex-pro */
+    .flex-pro {
+        width: 100%;
+        flex-direction: row;
+        border-bottom: 0;
+
+    }
+
+    .flex-pro .pro-img {
+        width: 25%;
+        height: 35px;
+    }
+
+    .pro-img > img {
+        height: 100%;
+    }
+
+    .flex-pro h3 {
+        font-weight: lighter;
+    }
+
+    .flex-pro p {
+        font-size: 14px;
+    }
+
+    /* work-img */
+    .work h2 {
+        font-weight: lighter;
+    }
+
+    /* flex-img */
+    .flex-img {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-img > .sports {
+        width: 50%;
+    }
+
+    /* BLOG-text */
+    .flex-text {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .flex-text > h2 {
+        width: 100%;
+        font-weight: lighter;
+    }
+
+    .flex-text > div {
+        width: 31%;
+    }
+
+    /* flex-info */
+    .flex-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .flex-info > h2 {
+        width: 100%;
+        font-weight: lighter;
+        font-style: italic;
+    }
+
+    .flex-item {
+        width: 50%;
+    }
+
+    /*footer*/
+    footer > h3 {
+        font-weight: lighter;
+    }
+}
