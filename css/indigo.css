@@ -2,7 +2,7 @@
 
 .container {
     width: 100%; /* 모바일,태블릿크기 */
-    max-width: 1200px; /* pc 크기 */
+    max-width: 1024px; /* pc 크기 */
     padding: 0 10px;
     margin: 0 auto; /* 가운데 정렬 */
 }
@@ -86,12 +86,13 @@ article > h2 {
 }
 
 .slide-img {
-    height: 220px;
+    width: 100%;
+    height: 11.45833333333333%;
 }
 
 .slide-img > img {
     width: 100%;
-    height: 100%;
+    height: 4.333333333333333%;
 }
 
 /* section */
@@ -113,13 +114,14 @@ section > h2 {
 
 /* text-box */
 .text-box {
-    width: 97%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 0 auto;
     margin-top: 80px;
 }
 
-.text-box > h2{
+.text-box > .title > h2{
     font-size: 35px;
     margin-bottom: 50px;
 }
@@ -245,7 +247,7 @@ section > h2 {
     display: block;
     width: 100%;
 }
-
+/* 보더 */
 .border > p {
     width: 20px;
     height: 3px;
@@ -260,9 +262,12 @@ section > h2 {
     text-align: center;
 }
 
-.flex-text > h2 {
-    font-size: 35px;
+.blog-title {
     margin-bottom: 50px;
+}
+
+.flex-text > .blog-title >h2 {
+    font-size: 35px;
 }
 
 .BLOG-text { 
@@ -299,7 +304,7 @@ label {
     text-align: center;
 }
 
-.flex-info > h2 {
+.flex-info > .info-title > h2 {
     font-size: 35px;
 }
 
@@ -360,8 +365,8 @@ footer > h3 > a {
         position: absolute;
         top: 10%;
         right: 0;
-        width: 60%;
-        margin-right: 2.5%;
+        width: 35%;
+        margin-right: 3%;
         flex-direction: row;
     }
     
@@ -380,21 +385,40 @@ footer > h3 > a {
         color: rgb(26, 64, 235);
     }
 
-    /* text-box */
-    .text-box {
-        margin-bottom: 10%;
+
+    /* section */
+    section {
+        margin-bottom: 80px;
     }
 
-    .text-box > h2{
-        font-weight: lighter;
+    /* text-box */
+    .text-box {
+        width: 70%;
     }
+
+    .text-box > .title > h2{
+        font-weight: lighter;
+        margin-bottom: 0;
+    }
+
+    .text-box > .title-text > p {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
 
     /* flex-pro */
     .flex-pro {
         width: 100%;
         flex-direction: row;
+        flex-wrap: wrap;
         border-bottom: 0;
+    }
 
+    .flex-pro > div {
+        width: 25%;
+        margin: 0 auto;
     }
 
     .flex-pro .pro-img {
@@ -406,12 +430,8 @@ footer > h3 > a {
         height: 100%;
     }
 
-    .flex-pro h3 {
-        font-weight: lighter;
-    }
-
     .flex-pro p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     /* work-img */
@@ -429,6 +449,11 @@ footer > h3 > a {
         width: 50%;
     }
 
+    /* 보더 */
+    .border > p {
+        height: 1px;
+    }
+
     /* BLOG-text */
     .flex-text {
         flex-direction: row;
@@ -436,8 +461,11 @@ footer > h3 > a {
         justify-content: space-between;
     }
 
-    .flex-text > h2 {
+    .flex-text > .blog-title {
         width: 100%;
+    }
+
+    .blog-title > h2 {
         font-weight: lighter;
     }
 
@@ -450,11 +478,13 @@ footer > h3 > a {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
-    .flex-info > h2 {
+
+    .info-title {
         width: 100%;
+    }
+    
+    .flex-info > .info-title > h2 {
         font-weight: lighter;
-        font-style: italic;
     }
 
     .flex-item {
@@ -465,4 +495,113 @@ footer > h3 > a {
     footer > h3 {
         font-weight: lighter;
     }
+}
+
+/* =================  pc버전  ====================*/
+@media screen and (min-width:1024px) {
+    /* text-box */
+    .slide-img {
+        width: 100%;
+    }
+    
+    .slide-img > img {
+        width: 100%;
+    }
+    
+    .text-box {
+        width: 100.5%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title {
+        width: 20%;
+    }
+
+    .title-text {
+        width: 60%;
+        height: 40px;
+        padding-left: 10px;
+        border-left: 1px solid #787878;
+    }
+    
+    .text-box > .title-text > p {
+        font-size: 14.5px;
+        text-align: justify;
+        margin-top: 0;
+    }
+
+    /* flex-pro */
+    .flex-pro {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 80px;
+        margin: 0 auto;
+    }
+
+    .flex-pro > div {
+        width: 22%;
+    }
+
+    .flex-pro p {
+        font-size: 12px;
+    }
+
+
+     /* work-img */
+     .work h2 {
+        padding-left: 4%;
+        text-align: left;
+    }
+
+    /* flex-img */
+    .flex-img {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-img > .sports {
+        width: 25%;
+    }
+
+    /* BLOG-text */
+    .flex-text {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .flex-text > div {
+        width: 25%;
+        border: 1px solid #000;
+    }
+
+    .flex-text > div:first-child {
+        width: 23%;
+    }
+
+    .blog-title {
+        text-align: left;
+        padding-left: 4%;
+    }
+
+    /* flex-info */
+    .flex-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-info > div {
+        width: 33.3%;
+    }
+
+    .info-title {
+        text-align: left;
+        padding-left: 4%;
+    }
+
 }
